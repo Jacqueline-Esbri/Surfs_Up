@@ -21,23 +21,21 @@ session = Session(engine)
 
 app = Flask(__name__)
 @app.route('/')
-
-
 def welcome():
     return(
-    '''
-    Welcome to the Climate Analysis API!
-    Available Routes:
-    /api/v1.0/precipitation
-    /api/v1.0/stations
-    /api/v1.0/tobs
-    /api/v1.0/temp/start/end
-    ''')
+    
+        f"Welcome to the Climate Analysis API!<br/>"
+        f"Available Routes:<br/>"
+        f"/api/v1.0/precipitation<br/>"
+        f"/api/v1.0/stations<br/>"
+        f"/api/v1.0/tobs<br>"
+        f"/api/v1.0/temp/start/end<br/>"
+    )
 
 
 @app.route("/api/v1.0/precipitation")
-
 def precipitation():
+    """Return the precipitation data for the last year"""
     prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
     precipitation = session.query(Measurement.date, Measurement.prcp).\
       filter(Measurement.date >= prev_year).all()
@@ -46,16 +44,16 @@ def precipitation():
 
 
 @app.route("/api/v1.0/stations")
-
 def stations():
+    """Return a list of stations"""
     results = session.query(Station.station).all()
     stations = list(np.ravel(results))
     return jsonify(stations=stations)
 
 
 @app.route("/api/v1.0/tobs")
-
 def temp_monthly():
+    """Return the temperature observations (tobs) for previous year"""
     prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
     results = session.query(Measurement.tobs).\
       filter(Measurement.station == 'USC00519281').\
@@ -66,8 +64,10 @@ def temp_monthly():
 
 @app.route("/api/v1.0/temp/<start>")
 @app.route("/api/v1.0/temp/<start>/<end>") 
+# Note: add this web address to see temps /api/v1.0/temp/2017-06-01/2017-06-30
 
 def stats(start=None, end=None):
+    """Return Temp_MIN, Temp_AVG, Temp_MAX"""
     sel = [func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)]
 
     if not end:
@@ -82,3 +82,7 @@ def stats(start=None, end=None):
         filter(Measurement.date <= end).all()
     temps = list(np.ravel(results))
     return jsonify(temps=temps)
+
+
+if __name__ == '__main__':
+    app.run()
