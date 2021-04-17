@@ -24,7 +24,7 @@ The purpose of this assignment was to build up skills in advanced data storage a
 
 Based on the exploratory analysis, the results showed that the average temperature for the months of June and December during the years from the data collected was 75 and 71 degrees, respectively. The lowest temperature on record for June and December was 64 and 56, and max highs were 85 and 83, respectively. The standard deviation for June was 3.25 and 3.75 in December, indicating only a 0.5 difference, which shows no major variation in the averages between the two. 
 
-The weather data contained information on collection stations that were used to collect the precipitation data. In order to determine how reliable the weather data was, we ran a query to find the number of stations and its number of recordings. The counts indicated that the collection station in Waihee, HI was the most active (2772 recordings) and Upper Wahiawa, HI was the least active (511 recordings). It is important to note that Upper Wahiawa also has the highest elevation at 306.6 out of all nine stations.
+The weather data contained information on collection stations that were used to collect the precipitation data. In order to determine how reliable the weather data was, we ran a query to find the number of stations and its number of recordings. The counts indicated that the collection station in Waihee, HI was the most active (2772 recordings) and Upper Wahiawa, HI was the least active (511 recordings). It is important to note that Upper Wahiawa also has the highest elevation (306.6) out of all nine stations.
 
 ## Fig. 1
 
@@ -51,7 +51,7 @@ The weather data contained information on collection stations that were used to 
 
 For the purpose of this assignment, additional queries were performed to gather more weather data for specific dates in the months of December, based on peak tourism season (12-25 to 12-31) in 2016 . The daily normal temperatures recorded from this time frame showed minimum  temperature of 60.0 degrees, average 71.75 degrees, and max 79.0 degrees.
 
-An additional query was designed to retrieve the last 12 months of precipitation data from the 12-24-2016 during the above mentioned time frame. The results showed higher precipitation levels during the summer months versus December. Lastly, temperatures were calculated from filtered dates for the month of June in 2017. The findings showed a low temperature of 71, average 77, and high of 83.
+An additional query was designed to retrieve the last 12 months of precipitation data from the 12-24-2016 and above mentioned time frame. The results showed higher precipitation levels during the summer months versus December. Lastly, temperatures were calculated from filtered dates for the month of June in 2017. The findings showed a low temperature of 71, average 77, and high of 83.
 
 In conclusion, the entire weather exploratory analysis showed that Hawaii is seasonally warm all year round. 
 
