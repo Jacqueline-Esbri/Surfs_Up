@@ -24,7 +24,7 @@ The purpose of this assignment was to build up skills in advanced data storage a
 
 Based on the exploratory analysis, the results showed that the average temperature for the months of June and December during the years from the data collected was 75˚ and 71˚, respectively. The lowest temperature on record for June and December was 64˚ and 56˚, and max highs were 85˚ and 83˚, respectively. The standard deviation for June was 3.25 and 3.75 in December, indicating only a 0.5 difference, which shows no major variation in the averages between the two. 
 
-The weather data contained information on collection stations that were used to collect the precipitation data. In order to determine how reliable the weather data was, we ran a query to find the number of stations and its number of recordings. The counts indicated that the collection station in Waihee, HI was the most active (2772 recordings) and Upper Wahiawa, HI was the least active (511 recordings). It is important to note that Upper Wahiawa also has the highest elevation (306.6) out of all nine stations.
+The SQLite database contained information on collection stations that were used to collect the precipitation data. In order to determine the reliability of the data, a query using the func.count and referencing Station.station was executed to show the number of stations and its recordings. The counts indicated that the collection station in Waihee, HI was the most active (2772 recordings) and Upper Wahiawa, HI was the least active (511 recordings). It is important to note that Upper Wahiawa also has the highest elevation (306.6) out of all nine stations.
 
 ## Fig. 1
 
