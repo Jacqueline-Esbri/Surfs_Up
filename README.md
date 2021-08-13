@@ -1,5 +1,5 @@
 # SurfsUp
-![modu9.png](Resources/modu9.png)
+![mod9.png](Resources/mod9.png)
 
 
 ## Overview of the Analysis
@@ -11,7 +11,7 @@ The assignment consists of the following two technical analysis:
 - Determine the summary statistics for June
 - Determine the summary statistics for December
 
-Using Python, Pandas functions and methods, and SQLAlchemy, the date column of the Measurements table in a sqlite database was filtered to retrieve all temperatures for the month of June and December. The list of temperatures was then converted to a DataFrame. Lastly, summary statistics are generated for the DataFrame.
+Using Python, Pandas functions and methods, and SQLAlchemy, the date column of a Measurements table in a sqlite file was filtered to retrieve all temperatures for the month of June and December. The list of temperatures was then converted to a DataFrame. Lastly, summary statistics was generated for the DataFrame.
 
 
 ## Resources
