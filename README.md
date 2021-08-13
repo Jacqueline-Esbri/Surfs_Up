@@ -1,5 +1,5 @@
 # SurfsUp
-![mod9.png](Resources/mod9.png)
+![modu9.png](Resources/modu9.png)
 
 
 ## Overview of the Analysis
