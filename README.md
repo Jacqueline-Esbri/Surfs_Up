@@ -16,11 +16,11 @@ Using Python, Pandas functions and methods, and SQLAlchemy, the date column of t
 
 ## Resources
 
-- SQLAlchemy (query tool designed for SQLite and integration statistical analysis with dataFrame analysis)
-- Flask (web framework that enables python use to build web pages)
+- SQLAlchemy 
+- Flask 
 - Jupyter Notebook and Pandas
-- A SQLite database containing weather information about Hawaii
-- VS Code to create the Flask application
+- hawaii.sqlite file
+- VS Code
 
 
 ## Results
